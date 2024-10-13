@@ -5,6 +5,17 @@ public partial class Form1 : Form
     public Form1()
     {
         InitializeComponent();
+        CalculatorButton button1 = new CalculatorButton
+        {
+            ButtonValue = "Calculate", // Set button value
+            Location = new Point(273, 317) // Set button location
+        };
+
+        // Subscribe to the ButtonClicked event
+        button1.ButtonClicked += Calculate_Click;
+
+        // Add the custom button to the form
+        this.Controls.Add(button1);
     }
 
     private void Calculate_Click(object sender, EventArgs e)

@@ -29,7 +29,6 @@ partial class Form1
     private void InitializeComponent()
     {
         Clear = new Button();
-        Calculate = new Button();
         ResultTextBox = new TextBox();
         Result = new Label();
         OperatorTextBox = new TextBox();
@@ -52,19 +51,6 @@ partial class Form1
         Clear.Text = "Clear";
         Clear.UseVisualStyleBackColor = false;
         Clear.Click += Clear_Click;
-        // 
-        // Calculate
-        // 
-        Calculate.BackColor = SystemColors.ActiveBorder;
-        Calculate.BackgroundImageLayout = ImageLayout.Stretch;
-        Calculate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-        Calculate.Location = new Point(273, 317);
-        Calculate.Name = "Calculate";
-        Calculate.Size = new Size(123, 33);
-        Calculate.TabIndex = 3;
-        Calculate.Text = "Calculate";
-        Calculate.UseVisualStyleBackColor = false;
-        Calculate.Click += Calculate_Click;
         // 
         // ResultTextBox
         // 
@@ -155,7 +141,6 @@ partial class Form1
         BackColor = SystemColors.GradientInactiveCaption;
         ClientSize = new Size(800, 450);
         Controls.Add(Clear);
-        Controls.Add(Calculate);
         Controls.Add(ResultTextBox);
         Controls.Add(Result);
         Controls.Add(OperatorTextBox);
