@@ -16,6 +16,7 @@ public partial class Form1 : Form
 
         // Add the custom button to the form
         this.Controls.Add(button1);
+
     }
 
     private void Calculate_Click(object sender, EventArgs e)
