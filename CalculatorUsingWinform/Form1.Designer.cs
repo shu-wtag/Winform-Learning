@@ -28,6 +28,7 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
+        components = new System.ComponentModel.Container();
         Clear = new Button();
         ResultTextBox = new TextBox();
         Result = new Label();
@@ -38,6 +39,11 @@ partial class Form1
         Num1TextBox = new TextBox();
         Num1 = new Label();
         label1 = new Label();
+        button1 = new Button();
+        Num1errorProvider = new ErrorProvider(components);
+        Num2errorProvider = new ErrorProvider(components);
+        ((System.ComponentModel.ISupportInitialize)Num1errorProvider).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)Num2errorProvider).BeginInit();
         SuspendLayout();
         // 
         // Clear
@@ -134,12 +140,33 @@ partial class Form1
         label1.TabIndex = 11;
         label1.Text = "Calculator";
         // 
+        // button1
+        // 
+        button1.Cursor = Cursors.Cross;
+        button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+        button1.Location = new Point(359, 424);
+        button1.Name = "button1";
+        button1.Size = new Size(75, 35);
+        button1.TabIndex = 20;
+        button1.Text = "Details";
+        button1.UseVisualStyleBackColor = true;
+        button1.Click += button1_Click;
+        // 
+        // Num1errorProvider
+        // 
+        Num1errorProvider.ContainerControl = this;
+        // 
+        // Num2errorProvider
+        // 
+        Num2errorProvider.ContainerControl = this;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = SystemColors.GradientInactiveCaption;
-        ClientSize = new Size(800, 450);
+        ClientSize = new Size(1065, 494);
+        Controls.Add(button1);
         Controls.Add(Clear);
         Controls.Add(ResultTextBox);
         Controls.Add(Result);
@@ -152,6 +179,8 @@ partial class Form1
         Controls.Add(label1);
         Name = "Form1";
         Text = "Form1";
+        ((System.ComponentModel.ISupportInitialize)Num1errorProvider).EndInit();
+        ((System.ComponentModel.ISupportInitialize)Num2errorProvider).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -169,4 +198,7 @@ partial class Form1
     private TextBox Num1TextBox;
     private Label Num1;
     private Label label1;
+    private Button button1;
+    private ErrorProvider Num1errorProvider;
+    private ErrorProvider Num2errorProvider;
 }

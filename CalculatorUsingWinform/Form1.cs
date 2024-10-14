@@ -2,6 +2,11 @@ namespace CalculatorUsingWinform;
 
 public partial class Form1 : Form
 {
+    public static string Text1;
+    public static string Text2;
+    public static string Text3;
+    public static string Text4;
+
     public Form1()
     {
         InitializeComponent();
@@ -23,15 +28,20 @@ public partial class Form1 : Form
     {
         if (Num1TextBox.Text == "" && Num2TextBox.Text == "")
         {
-            MessageBox.Show("Fields are empty.");
+            Num1errorProvider.SetError(this.Num1TextBox, "Fields are empty.");
+            //MessageBox.Show("Fields are empty.");
         }
         else if (Num1TextBox.Text == "")
         {
-            MessageBox.Show("First Operand is missing.");
+            Num1errorProvider.SetError(this.Num1TextBox, "First Operand is missing.");
+            //MessageBox.Show("First Operand is missing.");
         }
         else if (Num2TextBox.Text == "")
         {
-            MessageBox.Show("Second Operand is missing.");
+            Num1errorProvider.Clear();
+
+            Num2errorProvider.SetError(this.Num2TextBox, "Second Operand is missing.");
+            //MessageBox.Show("Second Operand is missing.");
         }
         else if (!int.TryParse(Num1TextBox.Text, out int number1) || !int.TryParse(Num2TextBox.Text, out int number2)) //Check if the inputs are int number or not
         {
@@ -96,5 +106,16 @@ public partial class Form1 : Form
         Num2TextBox.Clear();
         OperatorTextBox.Clear();
         ResultTextBox.Clear();
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        Text1 = Num1TextBox.Text;
+        Text2 = Num2TextBox.Text;
+        Text3 = OperatorTextBox.Text;
+        Text4 = ResultTextBox.Text;
+
+        Form2 f2 = new Form2();
+        f2.Show();
     }
 }
