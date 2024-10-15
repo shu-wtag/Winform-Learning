@@ -15,10 +15,10 @@ namespace CalculatorUsingWinform
         public CalculatorButton()
         {
             // Set default properties for the button
-            this.Size = new Size(100, 40); // Set button size
-            this.BackColor = Color.LightGray; // Set background color
-            this.Font = new Font("Arial", 14, FontStyle.Bold); // Set font style
-            this.FlatStyle = FlatStyle.Flat; // Set flat style for the button
+            this.Size = new Size(100, 40); 
+            this.BackColor = Color.LightGray; 
+            this.Font = new Font("Arial", 14, FontStyle.Bold); 
+            this.FlatStyle = FlatStyle.Flat;
         }
 
         // Override the OnPaint method to customize drawing
