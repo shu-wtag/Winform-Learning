@@ -12,11 +12,11 @@ public partial class Form1 : Form
         InitializeComponent();
         CalculatorButton button1 = new CalculatorButton
         {
-            ButtonValue = "Calculate", // Set button value
-            Location = new Point(273, 317) // Set button location
+            ButtonValue = "Calculate", 
+            Location = new Point(273, 317) 
         };
 
-        // Subscribe to the ButtonClicked event
+        //  ButtonClicked event
         button1.ButtonClicked += Calculate_Click;
 
         // Add the custom button to the form
